@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دفع - Ooredoo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background-color: #fff;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .lang, .back {
+      font-size: 14px;
+      color: #444;
+      cursor: pointer;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0;
+    }
+    .banner {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 15px auto;
+      display: block;
+    }
+    .container {
+      padding: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      direction: rtl;
+    }
+    .btn-other {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background: white;
+      color: #d90000;
+      border: 2px solid #d90000;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .summary {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 20px 20px 0 0;
+      margin-top: 25px;
+      border-top: 1px solid #ddd;
+    }
+    .summary p {
+      margin: 0 0 5px;
+    }
+    .continue-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ccc;
+      color: white;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="lang">❓ English</div>
+    <h1>دفع</h1>
+    <div class="back">←</div>
+  </header>
+
+  <img src="banner.jpg" alt="Smart Pay Banner" class="banner">
+
+  <div class="container">
+    <label for="phone">رقم الموبايل</label>
+    <input type="tel" id="phone" placeholder="أدخل رقم الهاتف">
+
+    <label for="amount">المبلغ</label>
+    <select id="amount">
+      <option value="5">5 د.ك</option>
+      <option value="10">10 د.ك</option>
+      <option value="20">20 د.ك</option>
+      <option value="50">50 د.ك</option>
+    </select>
+
+    <button class="btn-other">الدفع لرقم آخر</button>
+  </div>
+
+  <div class="summary">
+    <p><strong>إعادة التعبئة / دفع الفواتير</strong></p>
+    <p>الإجمالي: <span id="total">5.000 د.ك</span></p>
+    <button class="continue-btn" disabled>استمرار</button>
+  </div>
+</body>
+</html>
